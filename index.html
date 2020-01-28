@@ -1,0 +1,89 @@
+<html lang="en">
+  <head>
+    <title>Instagram Scroller</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width'/>
+
+    <style>
+
+      body {
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #EECDA3;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to bottom right, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to bottom right, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      #container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .bookmarklet {
+        position: relative;
+        text-align: center;
+        padding:10px 20px;
+        line-height: 1;
+        cursor:grab;
+        font-size: 32px;;
+        border:4px solid black;
+        background-color:white;
+        border-radius:40px;
+      }
+
+      .bookmarklet::after {
+        content: "Drag this to your bookmarks bar!";
+        position: absolute;
+        font-size: 12px;
+        top:-30px;
+        left: 0;
+        -webkit-transform: translateX(-50%) rotate(-10deg);
+        transform: translateX(-50%) rotate(-10deg);
+      }
+
+      a.bookmarklet {
+        color:black;
+        text-decoration: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id='container'>
+      <a class="bookmarklet" href="javascript:!function(e){var t;t=setInterval(function(){scrollTo({top:268435455})},function(){const e=Math.floor(800*Math.random());return e}());var o=e.createElement('div');o.setAttribute('style','position:fixed;bottom:20px;left:20px;padding:8px 10px;font-size:24px;background-color:white;border:2px solid black;z-index:100001;cursor:pointer;'),o.innerHTML='STOP SCROLLER',o.addEventListener('click',function(){clearInterval(t),o.parentNode.removeChild(o)}),e.getElementsByTagName('body')[0].appendChild(o)}(document);">
+        Start Scroller 👇
+      </a>
+    </div>
+  </body>
+
+  <script>
+    // Unminified code
+    // !(function(d){
+    //   var interval;
+      
+    //   function randomInt() {
+    //     const random = Math.floor(Math.random() * 800);
+    //     return random;
+    //   }
+
+    //   interval = setInterval(function(){
+    //     scrollTo({top:0xFFFFFFF});
+    //   },randomInt());
+      
+    //   function killInterval() {
+    //     clearInterval(interval);
+    //     stop.parentNode.removeChild(stop);
+    //   }
+
+    //   var stop = d.createElement('div');
+
+      // stop.setAttribute('style', 'position:fixed;bottom:20px;left:20px;padding:8px 10px;font-size:24px;background-color:white;border:2px solid black;z-index:100001;cursor:pointer;');
+    //   stop.innerHTML = 'STOP SCROLLER';
+    //   stop.addEventListener('click', killInterval);
+    //   d.getElementsByTagName('body')[0].appendChild(stop);
+
+    // })(document);
+
+  </script>
+</html>
