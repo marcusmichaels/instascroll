@@ -10,3 +10,5 @@ Automate scrolling through an instagram feed
 TODO: Build an "end-of-profile" detection to stop scroller automatically when there's nothing else to load.
 
 Side note: This has only been tested on one browser (Chrome) and on one computer (mine).
+
+[Get the bookmarklet here](https://marcusmichaels.github.io/instascroll/)
